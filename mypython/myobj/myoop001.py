@@ -22,8 +22,21 @@ s1.score = 90
 s1.age = 35
 print(s1.age) #新加的属性，在s2中是没有的
 print(s1.score) #修改的属性
+print(dir(s1))
+print(s1.__dict__)
 
 s2 = Student('abc', 100)
 print('s2类型', type(s2))
 print('s2的id', id(s2))
 print(s2.score)
+print(dir(s2))
+print(s2.__dict__)
+
+class Man:
+    pass
+
+print(isinstance(s1, Man))
+print(isinstance(s2, Man))
+print(isinstance(s1, s2))
+print(isinstance(s1, Student))
+print(isinstance(s2, Student))
